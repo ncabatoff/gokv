@@ -144,16 +144,16 @@ func NewStore(options Options) (Store, error) {
 
 	// Create a bucket if it doesn't exist yet.
 	// In bbolt key/value pairs are stored to and read from buckets.
-	err = db.Update(func(tx *bolt.Tx) error {
-		_, err := tx.CreateBucketIfNotExists([]byte(options.BucketName))
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-	if err != nil {
-		return result, err
-	}
+	//err = db.Update(func(tx *bolt.Tx) error {
+	//	_, err := tx.CreateBucketIfNotExists([]byte(options.BucketName))
+	//	if err != nil {
+	//		return err
+	//	}
+	//	return nil
+	//})
+	//if err != nil {
+	//	return result, err
+	//}
 
 	result.db = db
 	result.bucketName = options.BucketName

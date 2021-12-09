@@ -14,4 +14,6 @@ var (
 	JSON = JSONcodec{}
 	// Gob is a GobCodec that encodes/decodes Go values to/from gob.
 	Gob = GobCodec{}
+
+	None = NoCodec{}
 )
